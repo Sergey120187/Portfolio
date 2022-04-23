@@ -14,8 +14,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -25,12 +25,12 @@ dd {
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
-ul[class] {
+ul {
   list-style: none;
 }
 
@@ -46,8 +46,9 @@ img {
   display: block;
 }
 
-a[class] {
+a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Variables */
@@ -127,6 +128,8 @@ section {
 
 .btn {
   font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
   background-color: var(--blue);
   color: var(--white);
   border: none;
@@ -156,7 +159,8 @@ section {
 /* Header */
 
 .header {
-  min-height: 100vh;
+  color: var(--white);
+  height: 100vh;
   background: url(../images/header-bg.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -172,7 +176,7 @@ section {
   z-index: -1;
 }
 
-.header__top {
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,12 +208,11 @@ section {
 .menu__list-link {
   font-weight: 600;
   line-height: 130%;
-  color: var(--white);
   transition: text-decoration .5s, outline .5s, opacity .5s;
 }
 
 .header__content {
-  min-height: calc(100vh - 128px);
+  height: calc(100vh - 128px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -220,9 +223,7 @@ section {
   width: 60%;
   font-size: 48px;
   line-height: 130%;
-  color: var(--white);
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto 0;
 }
 
 .header__content-text span {
@@ -232,20 +233,14 @@ section {
 }
 
 .header__content-link {
-  position: absolute;
-  display: block;
-  padding-bottom: 30px;
-  font-weight: 600;
+  position: relative;
+  align-self: center;
   font-size: 18px;
   line-height: 130%;
-  color: var(--white);
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 33px;
+  margin-bottom: 63px;
   transition: text-decoration .5s, outline .5s, opacity .5s;
 }
  
-
 .header__content-link::before {
   position: absolute;
   content: '';
@@ -359,13 +354,9 @@ section {
 .service__title-1::before {
   background: url(../images/services-icon1.svg);
 }
-
-
 .service__title-2::before {
   background: url(../images/services-icon2.svg);
 }
-
-
 .service__title-3::before {
   background: url(../images/services-icon3.svg);
 }
@@ -377,6 +368,10 @@ section {
 
 /* Portfolio */
 
+.portfolio__title {
+  text-align: center;
+}
+
 .portfolio__filter {
   display: flex;
   justify-content: center;
@@ -384,19 +379,52 @@ section {
 }
 
 .portfolio__btn {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  color: var(--main-text);
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+  padding: 0;
   margin-right: 35px;
+  transition: box-shadow .5s, border-radius .5s, color .5s, text-decoration .5s;
+}
+.portfolio__btn:focus {
+  box-shadow: 0px 0px 0px 2px var(--bright-blue-05);
+  border-radius: 3px;
+}
+.portfolio__btn:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.mixitup-control-active {
+  color: var(--blue);
 }
 
 .portfolio__btn:nth-child(4) {
   margin-right: 0;
 }
 
-.portfolio .portfolio__gallery {
+.portfolio__gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 60px;
+}
+
+.portfolio__item {
+  position: relative;
+  /* transition: background-color 2s;                          не работает! */
+}
+
+.portfolio__item:hover::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--bright-blue-05);
 }
 
 .portfolio__item:nth-child(4) {

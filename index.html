@@ -5,21 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Иван Иванов</title>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <title>Портфолио Иван Иванов | Главная страница</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <header class="header">
-    <div class="header__top container">
-      <a class="logo" href="#">
-        <img src="images/logo.svg" alt="Логотип сайта.">
-      </a>
-      <nav class="menu">
+    <div class="container">
+      <nav class="header__nav">
+        <a class="logo" href="#">
+          <img src="images/logo.svg" alt="Логотип." width="159" height="53"></a>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-link" href="#">Обо мне</a>
@@ -41,12 +42,12 @@
           </li>
         </ul>
       </nav>
+      <div class="header__content">
+        <p class="header__content-text">Привет, я Иван Иванов <span>frontend- разработчик</span>
+        </p>
+        <a class="header__content-link" href="#">cмотреть работы</a>
+      </div>
     </div>
-    <div class="header__content container">
-      <p class="header__content-text">Привет, я Иван Иванов <span>frontend- разработчик</span>
-      </p>
-    </div>
-    <a class="header__content-link" href="#">cмотреть работы</a>
   </header>
 
   <main class="main-page">
@@ -55,10 +56,14 @@
     <section class="about container">
       <h2 class="title">Обо мне</h2>
       <p class="text">
-        Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь фронтенд-разработкой более года. До разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
+        Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь фронтенд-разработкой более года. До
+        разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело
+        приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
       </p>
       <p class="text">
-        С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче, где-то сложнее.  Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
+        С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче, где-то сложнее.
+        Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев
+        принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
       </p>
     </section>
 
@@ -99,7 +104,7 @@
         <li class="service__item">
           <h3 class="service__title service__title-1">Вёрстка проектов</h3>
           <p class="service__text">
-            Сделаю качественную вёрстку вашего  проекта по предоставленному макету или примеру
+            Сделаю качественную вёрстку вашего проекта по предоставленному макету или примеру
           </p>
         </li>
         <li class="service__item">
@@ -118,43 +123,33 @@
     </section>
 
     <section class="portfolio container">
-      <h2 class="title">Мои работы</h2>
-      <div class="portfolio__filter">
-        <button class="portfolio__btn" type="button">Все работы</button>
-        <button class="portfolio__btn" type="button">Лендинги</button>
-        <button class="portfolio__btn" type="button">Корпоративные</button>
-        <button class="portfolio__btn" type="button">E-commerce</button>
+      <div class="portfolio__title">
+        <h2 class="title">Мои работы</h2>
       </div>
-      <ul class="portfolio__gallery">
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img1.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+      <div class="portfolio__filter">
+        <button class="portfolio__btn" type="button" data-filter="all">Все работы</button>
+        <button class="portfolio__btn" type="button" data-filter=".land">Лендинги</button>
+        <button class="portfolio__btn" type="button" data-filter=".copr">Корпоративные</button>
+        <button class="portfolio__btn" type="button" data-filter=".e-com">E-commerce</button>
+      </div>
+      <ul class="portfolio__gallery" data-fancybox>
+        <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img1-big.jpg">
+          <img src="images/portfolio/img1.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img2.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+        <li class="portfolio__item mix copr" data-fancybox="gallery" data-src="images/portfolio/img2-big.jpg">
+          <img src="images/portfolio/img2.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img3.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+        <li class="portfolio__item mix e-com" data-fancybox="gallery" data-src="images/portfolio/img3-big.jpg">
+          <img src="images/portfolio/img3.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img4.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+        <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img4-big.jpg">
+          <img src="images/portfolio/img4.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img5.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+        <li class="portfolio__item mix land copr" data-fancybox="gallery" data-src="images/portfolio/img5-big.jpg">
+          <img src="images/portfolio/img5.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
-        <li class="portfolio__item">
-          <a class="portfolio__item-link" href="#">
-            <img src="images/portfolio/img6.jpg" alt="Внешний вид сайта." width="360" height="360">
-          </a>
+        <li class="portfolio__item mix land e-com" data-fancybox="gallery" data-src="images/portfolio/img6-big.jpg">
+          <img src="images/portfolio/img6.jpg" alt="Внешний вид сайта." width="360" height="360">
         </li>
       </ul>
       <button type="button" class="portfolio__btn-add btn" href="#">Загрузить еще</button>
@@ -163,6 +158,8 @@
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
 
