@@ -124,6 +124,34 @@ body {
   z-index: -1;
 }
 
+.btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  outline-width: 0;
+  padding: 12px 24px;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px var(--bright-blue-05);
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.btn:active {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* Header */
 
 .header {
@@ -278,7 +306,6 @@ body {
 }
 
 .skill__item-title {
-  /* display: block; */
   width: 64px;
   height: 32px;
   font-weight: 600;
@@ -343,4 +370,79 @@ body {
   line-height: 160%;
 }
 
+/* Portfolio */
 
+.portfolio {
+  padding-bottom: 140px;
+}
+
+.portfolio__title {
+  text-align: center;
+}
+
+.portfolio__filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.portfolio__btn {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  color: var(--main-text);
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+  padding: 0;
+  margin-right: 35px;
+  transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s, text-decoration 0.5s;
+}
+
+.portfolio__btn:focus {
+  box-shadow: 0 0 0 2 var(--bright-blue-05);
+  border-radius: 3px;
+}
+
+.portfolio__btn:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.mixitup-control-active {
+  color: var(--blue);
+}
+
+.portfolio__btn:nth-child(4) {
+  margin-right: 0;
+}
+
+.portfolio__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.portfolio__item {
+  position: relative;
+  /* transition: background-color 2s;                          не работает! */
+}
+
+.portfolio__item:hover::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--bright-blue-05);
+}
+
+.portfolio__item:nth-child(4) {
+  margin-top: 45px;
+}
+
+.portfolio__load-link {
+  display: flex;
+  justify-content: center;
+}
