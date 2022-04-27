@@ -20,7 +20,7 @@
     <div class="container">
       <nav class="header__nav">
         <a class="logo" href="#">
-          <img src="images/logo.svg" alt="Логотип." width="159" height="53"></a>
+          <img class="logo__img" src="images/logo.svg" alt="Логотип." width="159" height="53"></a>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-link" href="#">Обо мне</a>
@@ -52,115 +52,116 @@
     </div>
   </header>
 
-    <section class="about section">
+    <main>
+
+      <section class="about section">
+        <div class="container">
+          <h2 class="title">Обо мне</h2>
+          <p class="about__text">
+            Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь фронтенд-разработкой более года. До
+            разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело
+            приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
+          </p>
+          <p class="about__text">
+            С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче, где-то сложнее.
+            Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев
+            принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
+          </p>
+        </div>
+        </section>
+      
+        <section class="skills section">
       <div class="container">
-        <h2 class="title">Обо мне</h2>
-        <p class="about__text">
-          Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь фронтенд-разработкой более года. До
-          разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело
-          приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
-        </p>
-        <p class="about__text">
-          С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче, где-то сложнее.
-          Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев
-          принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
-        </p>
-      </div>
-  </section>
-
-  <section class="skills section">
-    <div class="container">
-      <h2 class="title">Навыки</h2>
-      <div class="skills__inner">
-        <img src="images/portrait.jpg" alt="Иван Иванов" width="415" height="450">
-
-        <div class="skills__list">
-          <div class="skill__item">
-            <span class="skill__item-title">HTML</span>
-            <div class="skill__item-row">
-              <span class="skill__item-progress" style="width: 85%;"></span>
+        <h2 class="title">Навыки</h2>
+        <div class="skills__inner">
+          <img class="skills__photo" src="images/portrait.jpg" alt="Иван Иванов" width="415" height="450">
+          <div class="skills__list">
+            <div class="skill__item">
+              <span class="skill__item-title">HTML</span>
+              <div class="skill__item-row">
+                <span class="skill__item-progress" style="width: 85%;"></span>
+              </div>
             </div>
-          </div>
-          <div class="skill__item">
-            <span class="skill__item-title">CSS</span>
-            <div class="skill__item-row">
-              <span class="skill__item-progress" style="width: 80%;"></span>
+            <div class="skill__item">
+              <span class="skill__item-title">CSS</span>
+              <div class="skill__item-row">
+                <span class="skill__item-progress" style="width: 80%;"></span>
+              </div>
             </div>
-          </div>
-          <div class="skill__item">
-            <span class="skill__item-title">JS</span>
-            <div class="skill__item-row">
-              <span class="skill__item-progress" style="width: 60%;"></span>
+            <div class="skill__item">
+              <span class="skill__item-title">JS</span>
+              <div class="skill__item-row">
+                <span class="skill__item-progress" style="width: 60%;"></span>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
-
-  <section class="services section">
-    <div class="container">
-      <h2 class="title">Услуги</h2>
-      <ul class="services__list">
-        <li class="service__item item-layout">
-          <h3 class="service__title service__title-1">Вёрстка проектов</h3>
-          <p class="service__text">
-            Сделаю качественную вёрстку вашего проекта по предоставленному макету или примеру
-          </p>
-        </li>
-        <li class="service__item item-cms">
-          <h3 class="service__title service__title-2">Посадка на CMS</h3>
-          <p class="service__text">
-            Интегрирую ваш проект в одну из популярных CMS
-          </p>
-        </li>
-        <li class="service__item item-support">
-          <h3 class="service__title service__title-3">Поддержка сайта</h3>
-          <p class="service__text">
-            Гарантирую поддержку вашего сайта на протяжениии 30 дней после сдача проекта
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="portfolio">
-    <div class="container">
-      <div class="portfolio__title">
-        <h2 class="title">Мои работы</h2>
+        </section>
+      
+        <section class="services section">
+      <div class="container">
+        <h2 class="title">Услуги</h2>
+        <ul class="services__list">
+          <li class="service__item item-layout">
+            <h3 class="service__title">Вёрстка проектов</h3>
+            <p class="service__text">
+              Сделаю качественную вёрстку вашего проекта по предоставленному макету или примеру
+            </p>
+          </li>
+          <li class="service__item item-cms">
+            <h3 class="service__title">Посадка на CMS</h3>
+            <p class="service__text">
+              Интегрирую ваш проект в одну из популярных CMS
+            </p>
+          </li>
+          <li class="service__item item-support">
+            <h3 class="service__title">Поддержка сайта</h3>
+            <p class="service__text">
+              Гарантирую поддержку вашего сайта на протяжениии 30 дней после сдача проекта
+            </p>
+          </li>
+        </ul>
       </div>
-      <div class="portfolio__filter">
-        <button class="portfolio__btn" type="button" data-filter="all">Все работы</button>
-        <button class="portfolio__btn" type="button" data-filter=".land">Лендинги</button>
-        <button class="portfolio__btn" type="button" data-filter=".copr">Корпоративные</button>
-        <button class="portfolio__btn" type="button" data-filter=".e-com">E-commerce</button>
+        </section>
+      
+        <section class="portfolio">
+      <div class="container">
+        <div class="portfolio__title">
+          <h2 class="title">Мои работы</h2>
+        </div>
+        <div class="portfolio__filter">
+          <button class="portfolio__btn" type="button" data-filter="all">Все работы</button>
+          <button class="portfolio__btn" type="button" data-filter=".land">Лендинги</button>
+          <button class="portfolio__btn" type="button" data-filter=".copr">Корпоративные</button>
+          <button class="portfolio__btn" type="button" data-filter=".e-com">E-commerce</button>
+        </div>
+        <ul class="portfolio__gallery" data-fancybox>
+          <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img1-big.jpg">
+            <img src="images/portfolio/img1.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+          <li class="portfolio__item mix copr" data-fancybox="gallery" data-src="images/portfolio/img2-big.jpg">
+            <img src="images/portfolio/img2.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+          <li class="portfolio__item mix e-com" data-fancybox="gallery" data-src="images/portfolio/img3-big.jpg">
+            <img src="images/portfolio/img3.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+          <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img4-big.jpg">
+            <img src="images/portfolio/img4.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+          <li class="portfolio__item mix land copr" data-fancybox="gallery" data-src="images/portfolio/img5-big.jpg">
+            <img src="images/portfolio/img5.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+          <li class="portfolio__item mix land e-com" data-fancybox="gallery" data-src="images/portfolio/img6-big.jpg">
+            <img src="images/portfolio/img6.jpg" alt="Внешний вид сайта." width="360" height="360">
+          </li>
+        </ul>
+        <div class="portfolio__load-link">
+          <a class="btn" href="#">Загрузить еще</a>
+        </div>
       </div>
-      <ul class="portfolio__gallery" data-fancybox>
-        <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img1-big.jpg">
-          <img src="images/portfolio/img1.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-        <li class="portfolio__item mix copr" data-fancybox="gallery" data-src="images/portfolio/img2-big.jpg">
-          <img src="images/portfolio/img2.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-        <li class="portfolio__item mix e-com" data-fancybox="gallery" data-src="images/portfolio/img3-big.jpg">
-          <img src="images/portfolio/img3.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-        <li class="portfolio__item mix copr e-com" data-fancybox="gallery" data-src="images/portfolio/img4-big.jpg">
-          <img src="images/portfolio/img4.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-        <li class="portfolio__item mix land copr" data-fancybox="gallery" data-src="images/portfolio/img5-big.jpg">
-          <img src="images/portfolio/img5.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-        <li class="portfolio__item mix land e-com" data-fancybox="gallery" data-src="images/portfolio/img6-big.jpg">
-          <img src="images/portfolio/img6.jpg" alt="Внешний вид сайта." width="360" height="360">
-        </li>
-      </ul>
-      <div class="portfolio__load-link">
-        <a class="btn" href="#">Загрузить еще</a>
-      </div>
-    </div>
-  </section>
+        </section>
+    </main>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
