@@ -409,7 +409,7 @@ body {
   outline-width: 0;
   padding: 0;
   margin-right: 35px;
-  transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s, text-decoration 0.5s;
+  transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
 }
 
 .portfolio__btn:focus {
@@ -440,7 +440,6 @@ body {
 
 .portfolio__item {
   position: relative;
-  /* transition: background-color 2s;                          не работает! */
 }
 
 .portfolio__item:hover::before {
@@ -453,6 +452,12 @@ body {
 
 .portfolio__item:nth-child(4) {
   margin-top: 45px;
+}
+
+.portfolio__item-img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
 }
 
 .portfolio__load-link {
