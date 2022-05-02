@@ -115,7 +115,6 @@ body {
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
-  /* Если убрать z-index, то в секции Навыки подчеркивание пропадает :)  */
 }
 
 .title::before {
@@ -124,7 +123,7 @@ body {
   height: 15px;
   width: 100%;
   left: 0;
-  bottom: 5px;
+  bottom: 4px;
   background-color: var(--light-grayish-blue);
   z-index: -1;
 }
@@ -135,8 +134,7 @@ body {
   line-height: 130%;
   background-color: var(--blue);
   color: var(--white);
-  border: none;
-  outline-width: 0;
+  border: 1px solid transparent;
   padding: 12px 24px;
   transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, outline 0.5s;
 }
@@ -148,12 +146,10 @@ body {
 .btn:hover {
   background-color: var(--white);
   color: var(--blue);
-  outline: 1px solid var(--blue);
+  border: 1px solid var(--blue);
 }
 
 .btn:active {
-  background-color: var(--blue);
-  color: var(--white);
   box-shadow: inset 0 7px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -212,11 +208,11 @@ body {
   display: flex;
 }
 
-.menu-item:not(:last-child) {
+.menu__item:not(:last-child) {
   margin-right: 35px;
 }
 
-.menu-link {
+.menu__link {
   font-weight: 600;
   line-height: 130%;
   transition: box-shadow 0.5s, border-radius 0.5s, opacity 0.5s;
@@ -230,21 +226,22 @@ body {
   position: relative;
 }
 
-.header__content-title {
-  width: 700px;
+.header__title {
+  max-width: 700px;
+  width: 100%;
   font-weight: 400;
   font-size: 48px;
   line-height: 130%;
   margin: auto 0;
 }
 
-.header__content-title-caption {
+.header__subtitle {
   font-weight: 700;
   font-size: 90px;
   line-height: 130%;
 }
 
-.header__content-link {
+.header__link {
   position: relative;
   align-self: center;
   font-size: 18px;
@@ -254,7 +251,7 @@ body {
   transition: box-shadow 0.5s, border-radius 0.5s , opacity 0.5s;
 }
  
-.header__content-link::before {
+.header__link::before {
   position: absolute;
   content: '';
   width: 37px;
@@ -265,25 +262,25 @@ body {
   top: 33px;
 }
 
-.menu__list-link:focus,
-.header__content-link:focus {
+.menu__link:focus,
+.header__link:focus {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
 
-.menu__list-link:hover,
-.header__content-link:hover {
+.menu__link:hover,
+.header__link:hover {
   text-decoration: underline;
 }
 
-.menu__list-link:active,
-.header__content-link:active {
+.menu__link:active,
+.header__link:active {
   opacity: 0.7;
 }
 
 /* About */
 
-.about__text:not(:last-child) {
+.about__text p:not(:last-child) {
   margin-bottom: 23px;
 }
 
@@ -298,39 +295,42 @@ body {
 }
 
 .skills__photo {
-
+  max-width: 415px;
+  height: 450px;
+  object-fit: cover;
+  margin-right: 90px;
 }
 
 .skills__list {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 90px;
   width: 100%;
 }
 
-.skill__item {
+.skills__item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.skill__item-title {
+.skills__title {
   width: 64px;
-  height: 32px;
-  /* Высоту указываю явно, потому что в макете высота 32px. Если не указать, то высота рассчитывается из размер шрифта * line-height, получается 28,8px. Это не соответствует макету */
   font-weight: 600;
-  /* flex:none; Это свойство добавляю, чтобы при уменьшении ширины окна браузера у этого элемента заданная ширина 64px не уменьшалась :) */
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
-.skill__item-row {
+.skills__row {
   background-color: var(--light-blue);
   max-width: 600px;
   width:100%;
+  height: 32px;
   margin-left: auto;
   position: relative;
 }
 
-.skill__item-progress {
+.skills__progress {
   position: absolute;
   top: 0;
   left: 0;
@@ -345,41 +345,42 @@ body {
   justify-content: space-between;
 }
 
-.service__item {
+.services__item {
   max-width: 330px;
   width: 100%;
   padding-top: 90px;
   position: relative;
 }
 
-.service__item::before {
+.services__item::before {
   content: '';
   position: absolute;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   width: 60px;
   height: 60px;
   top: 0;
 }
 
-.item-layout::before {
+.services__item--layout::before {
   background-image: url("../images/services-layout.svg");
 }
-.item-cms::before {
+.services__item--cms::before {
   background-image: url("../images/services-cms.svg");
 }
-.item-support::before {
+.services__item--support::before {
   background-image: url("../images/services-support.svg");
 }
 
-.service__title {
+.services__title {
   font-weight: 600;
   font-size: 28px;
-  line-height: 130%;;
+  line-height: 130%;
   margin-bottom: 25px;
 }
 
-.service__text {
+.services__text {
   font-size: 16px;
   line-height: 160%;
 }
@@ -388,37 +389,36 @@ body {
 
 .portfolio {
   padding-bottom: 140px;
-}
-
-.portfolio__title {
   text-align: center;
 }
 
-.portfolio__filter {
+.filters {
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
 }
 
-.portfolio__btn {
+.filters-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.filters__btn {
   font-weight: 600;
   font-size: 24px;
   line-height: 160%;
   color: var(--main-text);
   background-color: transparent;
   border: none;
-  outline-width: 0;
   padding: 0;
-  margin-right: 35px;
   transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
 }
 
-.portfolio__btn:focus {
-  box-shadow: 0 0 0 2 var(--bright-blue-05);
+.filters__btn:focus {
+  box-shadow: 0 0 0 2px var(--bright-blue-05);
   border-radius: 3px;
 }
 
-.portfolio__btn:hover {
+.filters__btn:hover {
   color: var(--blue);
   text-decoration: underline;
   cursor: pointer;
@@ -428,41 +428,30 @@ body {
   color: var(--blue);
 }
 
-.portfolio__btn:nth-child(4) {
-  margin-right: 0;
-}
-
 .portfolio__gallery {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
-  /* align-items: flex-end; */
-  margin-bottom: 60px;
+  margin-bottom: 15px;
+  margin-right: -45px;
 }
 
 .portfolio__item {
-  position: relative;
+  /* position: relative; */
+  margin-right: 45px;
+  margin-bottom: 45px;
 }
 
-.portfolio__item:hover::before {
+/* .portfolio__item:hover::before {
   position: absolute;
   content: '';
   height: 100%;
   width: 100%;
   background-color: var(--bright-blue-05);
-}
-
-.portfolio__item:nth-child(n+4) {
-  margin-top: 45px;
-}
+} */
+/* с псевдоэлементом fancybox не работает */
 
 .portfolio__item-img {
-  width: 360px;
+  max-width: 360px;
   height: 360px;
   object-fit: cover;
-}
-
-.portfolio__load-link {
-  display: flex;
-  justify-content: center;
 }
