@@ -70,6 +70,7 @@ button {
   --bright-blue-05: rgba(35, 82, 222, 0.5);
   --blue: #2352DE;
   --main-text: #333;
+  --black-06: rgba(0, 0, 0, 0.6);
   --black: #000;
 }
 
@@ -135,7 +136,7 @@ body {
   background-color: var(--blue);
   color: var(--white);
   border: 1px solid transparent;
-  padding: 12px 24px;
+  padding: 11px 23px;
   transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, outline 0.5s;
 }
 
@@ -158,6 +159,7 @@ body {
 .header {
   color: var(--white);
   height: 100vh;
+  line-height: 130%;
   background-image: url("../images/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -190,10 +192,6 @@ body {
   box-shadow: 0 0 0 3px var(--blue);
 }
 
-.logo:hover {
-  opacity: 0.7;
-}
-
 .logo:active {
   opacity: 0.5;
 }
@@ -214,7 +212,6 @@ body {
 
 .menu__link {
   font-weight: 600;
-  line-height: 130%;
   transition: box-shadow 0.5s, border-radius 0.5s, opacity 0.5s;
 }
 
@@ -244,8 +241,6 @@ body {
 .header__link {
   position: relative;
   align-self: center;
-  font-size: 18px;
-  line-height: 130%;
   padding-bottom: 32px;
   margin-bottom: 30px;
   transition: box-shadow 0.5s, border-radius 0.5s , opacity 0.5s;
@@ -274,7 +269,8 @@ body {
 }
 
 .menu__link:active,
-.header__link:active {
+.header__link:active,
+.logo:hover {
   opacity: 0.7;
 }
 
@@ -324,7 +320,7 @@ body {
 .skills__row {
   background-color: var(--light-blue);
   max-width: 600px;
-  width:100%;
+  width: 100%;
   height: 32px;
   margin-left: auto;
   position: relative;
@@ -347,7 +343,6 @@ body {
 
 .services__item {
   max-width: 330px;
-  width: 100%;
   padding-top: 90px;
   position: relative;
 }
@@ -364,20 +359,20 @@ body {
 }
 
 .services__item--layout::before {
-  background-image: url("../images/services-layout.svg");
+  background-image: url("../images/services/layout.svg");
 }
 .services__item--cms::before {
-  background-image: url("../images/services-cms.svg");
+  background-image: url("../images/services/cms.svg");
 }
 .services__item--support::before {
-  background-image: url("../images/services-support.svg");
+  background-image: url("../images/services/support.svg");
 }
 
 .services__title {
   font-weight: 600;
   font-size: 28px;
   line-height: 130%;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .services__text {
@@ -395,10 +390,10 @@ body {
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
-.filters-item:not(:last-child) {
+.filters__item:not(:last-child) {
   margin-right: 35px;
 }
 
@@ -436,21 +431,22 @@ body {
 }
 
 .portfolio__item {
-  /* position: relative; */
   margin-right: 45px;
   margin-bottom: 45px;
+  position: relative;
 }
 
-/* .portfolio__item:hover::before {
+.portfolio__link:hover::before {
   position: absolute;
   content: '';
   height: 100%;
   width: 100%;
-  background-color: var(--bright-blue-05);
-} */
-/* с псевдоэлементом fancybox не работает */
+  left: 0;
+  top: 0;
+  background-color: var(--black-06);
+}
 
-.portfolio__item-img {
+.portfolio__img {
   max-width: 360px;
   height: 360px;
   object-fit: cover;
