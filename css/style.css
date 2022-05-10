@@ -59,6 +59,16 @@ button {
   outline: 0;
 }
 
+button {
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+}
+
 /* Variables */
 
 :root {
@@ -70,6 +80,8 @@ button {
   --bright-blue-05: rgba(35, 82, 222, 0.5);
   --blue: #2352DE;
   --main-text: #333;
+  --black-03: rgba(0, 0, 0, 0.3);
+  --black-045: rgba(0, 0, 0, 0.45);
   --black-06: rgba(0, 0, 0, 0.6);
   --black: #000;
 }
@@ -390,7 +402,7 @@ body {
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 59px;
+  margin-bottom: 63px;
 }
 
 .filters__item:not(:last-child) {
@@ -400,11 +412,6 @@ body {
 .filters__btn {
   font-weight: 600;
   font-size: 24px;
-  line-height: 160%;
-  color: var(--main-text);
-  background-color: transparent;
-  border: none;
-  padding: 0;
   transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
 }
 
@@ -416,7 +423,6 @@ body {
 .filters__btn:hover {
   color: var(--blue);
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .mixitup-control-active {
@@ -433,6 +439,10 @@ body {
 .portfolio__item {
   margin-right: 45px;
   margin-bottom: 45px;
+}
+
+.portfolio__link {
+  display: block;
   position: relative;
 }
 
@@ -450,4 +460,127 @@ body {
   max-width: 360px;
   height: 360px;
   object-fit: cover;
+}
+
+/* Reviews */
+
+.reviews {
+  background-color: var(--grey);
+  text-align: center;
+}
+
+.reviews__list {
+  padding: 0 50px;
+}
+
+.reviews__item-inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.article {
+  width: 400px;
+  margin-right: 100px;
+}
+
+.article__img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.article__author {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--blue);
+}
+
+.article__blockquote {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.reviews__video {
+  max-width: 570px;
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/video-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.reviews__video::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-03);
+  z-index: -1;
+}
+
+.reviews__video-img {
+  width: 85px;
+  height: 100px;
+  object-fit: contain;
+  transition: width 0.7s, height 0.7s;
+}
+
+.reviews__video:hover:before {
+  background-color: var(--black-06);
+}
+
+.reviews__video:hover .reviews__video-img{
+  width: 129px;
+  height: 150px;
+}
+
+.reviews__video:active:before {
+  background-color: var(--black-045);
+}
+
+.reviews__video:active .reviews__video-img{
+  width: 51px;
+  height: 60px;
+}
+
+.reviews__video:focus {
+  box-shadow: 0 0 0 3px var(--bright-blue-05);
+
+  /* Не работает!!!!!!!!!!! */
+  
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dots button {
+  font-size: 0;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+.slick-dots li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.slick-active button {
+  background-color: var(--main-text);
+  height: 15px;
+  width: 15px;
+  transform: translateY(-1px);
 }
