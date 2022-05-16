@@ -97,7 +97,7 @@ body {
   color: var(--main-text);
 }
 
-/* .sr-only {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -108,7 +108,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 .container {
   max-width: 1200px;
@@ -583,4 +583,65 @@ body {
   height: 15px;
   width: 15px;
   transform: translateY(-1px);
+}
+
+/* Statistics */
+
+.statistics__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statistics__item {
+  background-color: var(--grey);
+  max-width: 280px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--light-blue);
+  padding: 150px 5px 45px;
+  position: relative;
+}
+
+.statistics__title {
+  display: block;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+.statistics__item::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 50px;
+  transform:translateX(-50%);
+  /* Правильно ли спозиционировал??? */
+}
+
+.statistics__item--work::before {
+  background-image: url("../images/icon-work.svg");
+}
+.statistics__item--clients::before {
+  background-image: url("../images/icon-clients.svg");
+}
+.statistics__item--coffee::before {
+  background-image: url("../images/icon-coffee.svg");
+}
+.statistics__item--reviews::before {
+  background-image: url("../images/icon-review.svg");
+}
+
+.statistics__number {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 100%;
+}
+
+/* Contacts */
+
+.contacts {
+
 }
