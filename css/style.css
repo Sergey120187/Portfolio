@@ -55,7 +55,9 @@ a {
 }
 
 a, 
-button {
+button,
+input,
+textarea {
   outline: 0;
 }
 
@@ -76,8 +78,11 @@ button {
   --white-05: rgba(255,255,255, 0.5);
   --grey: #F6F6F8;
   --light-grayish-blue: #E1E6F6;
+  --dark-grayish-blue: #9C9CAB;
+  --very-dark-grayish-blue: #343740;
   --light-blue :#DBDBED;
   --bright-blue-05: rgba(35, 82, 222, 0.5);
+  --bright-blue-07: rgba(35, 82, 222, 0.7);
   --blue: #2352DE;
   --main-text: #333;
   --black-03: rgba(0, 0, 0, 0.3);
@@ -152,7 +157,9 @@ body {
   transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, outline 0.5s;
 }
 
-.btn:focus {
+.btn:focus,
+.form__input:focus,
+.form__textarea:focus {
   box-shadow: 0 0 0 3px var(--bright-blue-05);
 }
 
@@ -172,7 +179,7 @@ body {
   color: var(--white);
   height: 100vh;
   line-height: 130%;
-  background-image: url("../images/header-bg.jpg");
+  /* background-image: url("../images/header-bg.jpg"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -282,7 +289,8 @@ body {
 
 .menu__link:active,
 .header__link:active,
-.logo:hover {
+.logo:hover,
+.social__item:hover {
   opacity: 0.7;
 }
 
@@ -415,12 +423,17 @@ body {
   transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
 }
 
-.filters__btn:focus {
+.filters__btn:focus,
+.contacts__link:focus, 
+.social__link:focus {
   box-shadow: 0 0 0 2px var(--bright-blue-05);
   border-radius: 3px;
 }
 
-.filters__btn:hover {
+/* Social__link:focus корректно не работает. Не разобрался */
+
+.filters__btn:hover, 
+.contacts__link:hover {
   color: var(--blue);
   text-decoration: underline;
 }
@@ -510,7 +523,7 @@ body {
   max-width: 570px;
   width: 100%;
   height: 400px;
-  background-image: url("../images/video-bg.jpg");
+  /* background-image: url("../images/video-bg.jpg"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -643,5 +656,116 @@ body {
 /* Contacts */
 
 .contacts {
+  padding-bottom: 140px;
+}
 
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__info {
+  max-width: 530px;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.contacts__info p {
+  margin-bottom: 30px;
+}
+
+.contacts__list {
+  margin-bottom: 16px;
+}
+
+.contacts__item {
+  margin-bottom: 10px;
+}
+
+.contacts__link {
+  line-height: 130%;
+  color: var(--blue);
+  transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
+}
+
+.contacts__link:active {
+  color: var(--bright-blue-07);
+}
+
+.social {
+  display: flex;
+}
+
+.social__item {
+  transition: box-shadow 0.5s, opacity 0.5s;
+}
+
+.social__item:active {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.form {
+  max-width: 540px;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.form__contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__contact .form__label,
+.form__input {
+  width: 255px;
+}
+
+.form__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.form__input,
+.form__textarea {
+  border: none;
+  background-color: var(--grey);
+  padding: 13px 0 13px 15px;  
+  margin-bottom: 30px;
+  transition: box-shadow 0.7s;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--dark-grayish-blue);
+  transition: color 0.5s;
+}
+
+.form__input:hover::placeholder,
+.form__textarea:hover::placeholder
+{
+  color: var(--black);
+}
+
+.form .form__textarea {
+  width: 100%;
+  resize: none;
+  height: 115px;
+  margin-bottom: 26px;
+  /* Если не указать дополнительно отступ 26, а оставить 30, как в макете, то почему-то не совпадает по pixel perfect. */
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--very-dark-grayish-blue);
+  height: 153px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
