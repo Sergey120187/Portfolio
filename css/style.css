@@ -37,6 +37,7 @@ ul {
   list-style: none;
 }
 
+a,
 input,
 button,
 textarea,
@@ -44,21 +45,15 @@ select {
   font: inherit;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 a {
   text-decoration: none;
   color: inherit;
+  outline: 0;
 }
 
-a, 
-button,
-input,
-textarea {
-  outline: 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 button {
@@ -466,7 +461,7 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: var(--black-06);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .portfolio__img {
@@ -486,18 +481,17 @@ body {
   padding: 0 50px;
 }
 
-.reviews__item-inner {
+.reviews__inner {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
 }
 
-.article {
+.review-card {
   width: 400px;
   margin-right: 100px;
 }
 
-.article__img {
+.review-card__img {
   width: 130px;
   height: 130px;
   object-fit: cover;
@@ -505,14 +499,17 @@ body {
   margin: 0 auto 20px;
 }
 
-.article__author {
-  margin-bottom: 20px;
+.review-card__author {
+  display: block;
+  font-style: normal;
   font-weight: 600;
   font-size: 24px;
+  line-height: 130%;
   color: var(--blue);
+  margin-bottom: 20px;
 }
 
-.article__blockquote {
+.review-card__blockquote {
   font-style: italic;
   font-weight: 300;
   font-size: 24px;
@@ -520,6 +517,7 @@ body {
 }
 
 .reviews__video {
+  display: block;
   max-width: 570px;
   width: 100%;
   height: 400px;
@@ -576,6 +574,10 @@ body {
 }
 
 .slick-dots {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
