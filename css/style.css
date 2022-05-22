@@ -481,17 +481,17 @@ body {
   padding: 0 50px;
 }
 
-.reviews__inner {
-  display: flex;
-  align-items: center;
-}
-
-.review-card {
+.reviews__comment {
   width: 400px;
   margin-right: 100px;
 }
 
-.review-card__img {
+.reviews__item {
+  display: flex;
+  align-items: center;
+}
+
+.reviews__img {
   width: 130px;
   height: 130px;
   object-fit: cover;
@@ -499,7 +499,7 @@ body {
   margin: 0 auto 20px;
 }
 
-.review-card__author {
+.reviews__author {
   display: block;
   font-style: normal;
   font-weight: 600;
@@ -509,7 +509,7 @@ body {
   margin-bottom: 20px;
 }
 
-.review-card__blockquote {
+.reviews__blockquote {
   font-style: italic;
   font-weight: 300;
   font-size: 24px;
@@ -521,7 +521,7 @@ body {
   max-width: 570px;
   width: 100%;
   height: 400px;
-  /* background-image: url("../images/video-bg.jpg"); */
+  background-image: url("../images/video-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
