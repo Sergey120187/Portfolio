@@ -521,7 +521,6 @@ body {
   max-width: 570px;
   width: 100%;
   height: 400px;
-  background-image: url("../images/video-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -541,10 +540,15 @@ body {
   z-index: -1;
 }
 
-.reviews__video-img {
+.reviews__video::after {
+  position: absolute;
+  content: '';
   width: 85px;
   height: 100px;
-  object-fit: contain;
+  background-image: url("../images/play.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   transition: width 0.7s, height 0.7s;
 }
 
@@ -552,7 +556,7 @@ body {
   background-color: var(--black-06);
 }
 
-.reviews__video:hover .reviews__video-img{
+.reviews__video:hover:after {
   width: 129px;
   height: 150px;
 }
@@ -561,16 +565,13 @@ body {
   background-color: var(--black-045);
 }
 
-.reviews__video:active .reviews__video-img{
+.reviews__video:active:after {
   width: 51px;
   height: 60px;
 }
 
 .reviews__video:focus {
   box-shadow: 0 0 0 3px var(--bright-blue-05);
-
-  /* Не работает!!!!!!!!!!! */
-  
 }
 
 .slick-dots {
@@ -608,6 +609,9 @@ body {
 }
 
 .statistics__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--grey);
   max-width: 280px;
   width: 100%;
@@ -632,7 +636,7 @@ body {
   background-size: contain;
   background-position: center;
   top: 50px;
-  transform:translateX(-50%);
+  transform:translateX(50%);
   /* Правильно ли спозиционировал??? */
 }
 
