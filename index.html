@@ -191,7 +191,7 @@
 
     <section class="reviews section">
       <div class="container">
-        <h2 class="title">Отзывы клиентов</h2>
+        <h2 class="title reviews__title">Отзывы клиентов</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -201,7 +201,7 @@
                 <p>Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно. Рекомендую!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
           </li>
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -211,7 +211,7 @@
                 <p>Будем рады видеть в команде в ВКонтакте!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
           </li>
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -221,7 +221,7 @@
                 <p>Это лучший дизайн!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
           </li>
         </ul>
       </div>
@@ -232,17 +232,12 @@
       <div class="container">
         <ul class="statistics__list">
           <li class="statistics__item statistics__item--work">
-            <span class="statistics__title">Выполненных работ
-              Выполненных работ
-              Выполненных работ
-              Выполненных работ
-              Выполненных работ
-
-            </span>
+            <span class="statistics__title">Выполненных работ</span>
             <span class="statistics__number">56</span>
           </li>
           <li class="statistics__item statistics__item--clients">
-            <span class="statistics__title">Довольных клиентов</span>
+            <span class="statistics__title">Довольных клиентов
+            </span>
             <span class="statistics__number">23</span>
           </li>
           <li class="statistics__item statistics__item--coffee">
@@ -261,10 +256,12 @@
       <div class="container">
         <h2 class="title">Контакты</h2>
         <div class="contacts__inner">
-          <div class="contacts__info">
-            <p>
-              Связаться со мной можно, воспользовавшись контактной формой, или напрямую по номеру телефона, email, в соцсетях:
-            </p>
+          <adress class="contacts__info">
+            <div class="contacts__text">
+              <p>
+                Связаться со мной можно, воспользовавшись контактной формой, или напрямую по номеру телефона, email, в соцсетях:
+              </p>
+            </div>
             <ul class="contacts__list">
               <li class="contacts__item">
                 <a class="contacts__link" href="tel:+380501111111">+38 (050) 111 11 11</a>
@@ -275,33 +272,31 @@
             </ul>
             <ul class="social">
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img class="social__img" src="images/social/instagram.svg" alt="Instagram">
-                </a>
+                <a class="social__link social__link--inst" href="#" target="_blank" title="Перейти в Instagram"></a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img class="social__img" src="images/social/facebook.svg" alt="Facebook">
-                </a>
+                <a class="social__link social__link--fb" href="#" target="_blank" title="Перейти в Facebook"></a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img class="social__img" src="images/social/telegram.svg" alt="Telegram">
-                </a>
+                <a class="social__link social__link--telegram" href="#" target="_blank" title="Перейти в Telegram"></a>
               </li>
             </ul>
-          </div>
+          </adress>
           <form class="form">
             <div class="form__contact">
-              <label class="form__label" for="name">Ваше имя</label>
-              <label class="form__label" for="phone">Номер телефона</label>
-              <input class="form__input" type="text" id="name" name="username" placeholder="Иван" required>
-              <input class="form__input" type="tel" id="phone" name="phone" placeholder="+380501111111" required>
+              <div class="form__item">
+                <label class="form__label" for="name">Ваше имя</label>
+                <input class="form__field" type="text" id="name" name="username" placeholder="Иван" required>
+              </div>
+              <div class="form__item">
+                <label class="form__label" for="phone">Номер телефона</label>
+                <input class="form__field" type="tel" id="phone" name="phone" placeholder="+380501111111" required>
+              </div>
             </div>
             <label class="form__label" for="message">Ваше сообщение</label>
-            <textarea class="form__textarea" id="message" name="message" placeholder="Текст вашего сообщения"
+            <textarea class="form__field form__field--message" id="message" name="message" placeholder="Текст вашего сообщения"
               required></textarea>
-            <button class="btn form__button" type="submit">Отправить</button>
+            <button class="btn" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -310,8 +305,13 @@
   </main>
 
   <footer class="footer">
-    <a class="logo" href="#">
-      <img class="logo__img" src="images/logo.svg" alt="Логотип" width="159" height="53"></a>
+    <div class="container">
+      <div class="footer__logo">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип" width="159" height="53">
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
