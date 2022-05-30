@@ -896,7 +896,7 @@ body {
     margin-right: 0;
   }
   .header__content {
-    height: calc(100vh - 52px);
+    height: calc(100vh - 59px);
   }
   .header__title {
     font-size: 38px;
