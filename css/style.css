@@ -910,6 +910,7 @@ body {
     background-image: url('../images/icon-menu.svg');
     background-repeat: no-repeat;
     background-position: center center;
+    transition: background-image 1s;
   }
   .header__btn--active {
     background-image: url('../images/icon-menu_close.svg');
