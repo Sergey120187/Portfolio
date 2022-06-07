@@ -713,9 +713,6 @@ body {
   margin-bottom: 30px;
 }
 
-.contacts__list {
-}
-
 .contacts__item:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -852,7 +849,7 @@ body {
     display: block;
     text-align: center;
     background-color: var(--soft-blue);
-    padding: 76px 0 15px;
+    padding: 70px 0 15px;
     transform: translateY(-150%);
     transition: transform 0.7s;
     z-index: 1;
@@ -894,11 +891,11 @@ body {
   }
 
   .header__title {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   .header__subtitle {
-    font-size: 60px;
+    font-size: 58px;
   }
 
   /* ----------------- */
