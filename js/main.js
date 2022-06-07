@@ -5,8 +5,9 @@ $(function(){
   // })
   
     $('.header__btn').on('click', function(){
-      $('.menu').toggleClass('menu--active');
-      $('.header__btn').toggleClass('header__btn--active');
+      $('.menu').toggleClass('menu--active'),
+      $('.header__btn').toggleClass('header__btn--active'),
+      $('body').toggleClass('fixed');
 
     });
 
