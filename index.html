@@ -23,7 +23,9 @@
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="Логотип" width="159" height="53">
         </a>
-        <button class="header__btn" type="button"></button>
+        <button class="header__btn" type="button">
+          <span class="sr-only">Открыть меню</span>
+        </button>
         <ul class="menu">
           <li class="menu__item">
             <a class="menu__link" href="#">Обо мне</a>
@@ -62,15 +64,11 @@
         <h2 class="title">Обо мне</h2>
         <div class="about__text">
           <p>
-            Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь фронтенд-разработкой более года. До
-            разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело
-            приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
+            Приветствую всех на своём сайте! Меня зовут Сергей, я из Владимира. Занимаюсь фронтенд-разработкой более года. До разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело приносило удовольствие и деньги, пока не наткнулся на один интересный курс.
           </p>
           <p>
             С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче, где-то сложнее.
-            Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев
-            принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться
-            ниже.
+            Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через несколько месяцев принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ можно ознакомиться ниже.
           </p>
         </div>
       </div>
@@ -83,19 +81,25 @@
           <img class="skills__photo" src="images/portrait.jpg" alt="Иван Иванов" width="415" height="450">
           <ul class="skills__list">
             <li class="skills__item">
-              <span class="skills__title">html</span>
+              <span class="skills__title">html
+                <span class="sr-only">85%</span>
+              </span>
               <div class="skills__row">
                 <span class="skills__progress" style="width: 85%;"></span>
               </div>
             </li>
             <li class="skills__item">
-              <span class="skills__title">css</span>
+              <span class="skills__title">css
+                <span class="sr-only">80%</span>
+              </span>
               <div class="skills__row">
                 <span class="skills__progress" style="width: 80%;"></span>
               </div>
             </li>
             <li class="skills__item">
-              <span class="skills__title">js</span>
+              <span class="skills__title">js
+                <span class="sr-only">60%</span>
+              </span>
               <div class="skills__row">
                 <span class="skills__progress" style="width: 60%;"></span>
               </div>
@@ -137,7 +141,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <!-- <section class="portfolio">
       <div class="container">
         <h2 class="title">Мои работы</h2>
         <ul class="filters">
@@ -192,7 +196,7 @@
 
     <section class="reviews section">
       <div class="container">
-        <h2 class="title reviews__title">Отзывы клиентов</h2>
+        <h2 class="title">Отзывы клиентов</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -202,7 +206,7 @@
                 <p>Фантастика! Я всецело доволен работой этого специалиста. Быстро и качественно. Рекомендую!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"><span class="sr-only">Воспроизвести видео</span></a>
           </li>
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -212,7 +216,7 @@
                 <p>Будем рады видеть в команде в ВКонтакте!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"><span class="sr-only">Воспроизвести видео</span></a>
           </li>
           <li class="reviews__item">
             <div class="reviews__comment">
@@ -222,7 +226,7 @@
                 <p>Это лучший дизайн!</p>
               </blockquote>
             </div>
-            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')" title="Воспроизвести видео"></a>
+            <a class="reviews__video" data-fancybox href="https://youtu.be/V1g0RUWfauw" style="background-image: url('images/video-bg.jpg')"><span class="sr-only">Воспроизвести видео</span></a>
           </li>
         </ul>
       </div>
@@ -233,20 +237,20 @@
       <div class="container">
         <ul class="statistics__list">
           <li class="statistics__item statistics__item--work">
-            <span class="statistics__title">Выполненных работ</span>
+            <h3 class="statistics__title">Выполненных работ</h3>
             <span class="statistics__number">56</span>
           </li>
           <li class="statistics__item statistics__item--clients">
-            <span class="statistics__title">Довольных клиентов
-            </span>
+            <h3 class="statistics__title">Довольных клиентов
+            </h3>
             <span class="statistics__number">23</span>
           </li>
           <li class="statistics__item statistics__item--coffee">
-            <span class="statistics__title">Выпито чашек кофе</span>
+            <h3 class="statistics__title">Выпито чашек кофе</h3>
             <span class="statistics__number">477</span>
           </li>
           <li class="statistics__item statistics__item--reviews">
-            <span class="statistics__title">Всего отзывов</span>
+            <h3 class="statistics__title">Всего отзывов</h3>
             <span class="statistics__number">48</span>
           </li>
         </ul>
@@ -273,13 +277,13 @@
             </ul>
             <ul class="social">
               <li class="social__item">
-                <a class="social__link social__link--inst" href="#" target="_blank" title="Перейти в Instagram"></a>
+                <a class="social__link social__link--inst" href="#" style="background-image: url('images/social/instagram.svg')" target="_blank" title="Перейти в Instagram"><span class="sr-only">Instagram</span></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--fb" href="#" target="_blank" title="Перейти в Facebook"></a>
+                <a class="social__link social__link--fb" href="#" style="background-image: url('images/social/facebook.svg')" target="_blank" title="Перейти в Facebook"><span class="sr-only">Facebook</span></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram" href="#" target="_blank" title="Перейти в Telegram"></a>
+                <a class="social__link social__link--telegram" href="#" style="background-image: url('images/social/telegram.svg')" target="_blank" title="Перейти в Telegram"><span class="sr-only">Telegram</span></a>
               </li>
             </ul>
           </adress>
@@ -311,7 +315,7 @@
           <img class="logo__img logo__img--footer" src="images/logo.svg" alt="Логотип" width="159" height="53">
         </a>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/mixitup.min.js"></script>
