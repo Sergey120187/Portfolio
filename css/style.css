@@ -1096,8 +1096,8 @@ body {
   }
 
   .section {
-    padding: 50px 0;
-    text-align: center;
+    padding: 40px 0;
+    /* text-align: center; */
   }
 
   .header__nav {
@@ -1141,10 +1141,10 @@ body {
   }
 
   /* ----------------- */
-
+/* 
   .about__text, .services__list {
     text-align: left;
-  }
+  } */
 
   .services__item::before {
     width: 40px;
@@ -1156,7 +1156,7 @@ body {
   }
 
   .services__item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .services__title {
