@@ -923,7 +923,7 @@ body {
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .title {
     font-size: 32px;
     margin-bottom: 40px;
@@ -996,6 +996,7 @@ body {
   }
 
   /* ------------------- */
+
   .services__list {
     text-align: left;
   }
@@ -1015,7 +1016,7 @@ body {
   }
 }
 
-@media (max-width: 576px), (orientation: landscape)  {
+@media (max-width: 576px) {
   .title {
     font-size: 28px;
     margin-bottom: 30px;
@@ -1045,6 +1046,7 @@ body {
     font-size: 14px;
     margin-bottom: 11px;
   }
+
   /* ------------------ */
 
   .skills__photo {
@@ -1082,3 +1084,83 @@ body {
   }
 }
 /* Чтобы фото в навыках вставало по центру. Другого способа не нашел */
+
+@media (min-aspect-ratio: 18/9) and (max-width: 992px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .title::before {
+    height: 10px;
+  }
+
+  .section {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .header__nav {
+    padding-top: 11px;
+  }
+
+  .logo__img {
+    width: 111px;
+    height: 37px;
+  }
+
+  .menu {
+    padding: 50px 0 15px;
+  }
+
+  .menu__item {
+    margin-bottom: 9px;
+  }
+
+  .header__content {
+    height: calc(100vh - 59px);
+  }
+
+  .header__title {
+    font-size: 28px;
+  }
+
+  .header__subtitle {
+    font-size: 40px;
+  }
+
+  .header__link {
+    font-size: 14px;
+    line-height: 19px;
+    padding-bottom: 32px;
+    margin-bottom: 11px;
+  }
+
+  .header__link::before {
+    top: 28px;
+  }
+
+  /* ----------------- */
+
+  .about__text, .services__list {
+    text-align: left;
+  }
+
+  .services__item::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .services__item {
+    padding-top: 50px;
+  }
+
+  .services__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .services__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
