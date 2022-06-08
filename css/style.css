@@ -923,7 +923,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .title {
     font-size: 32px;
     margin-bottom: 40px;
@@ -1015,7 +1015,7 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px), (orientation: landscape)  {
   .title {
     font-size: 28px;
     margin-bottom: 30px;
