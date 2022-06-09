@@ -160,6 +160,7 @@ body {
 }
 
 .btn:focus,
+.portfolio__link:focus,
 .form__field:focus {
   box-shadow: 0 0 0 3px var(--bright-blue-05);
 }
@@ -217,7 +218,8 @@ body {
   box-shadow: 0 0 0 3px var(--blue);
 }
 
-.logo:active {
+.logo:active,
+.portfolio__link:active::before {
   opacity: 0.5;
 }
 
@@ -282,6 +284,7 @@ body {
 .header__link {
   position: relative;
   align-self: center;
+  font-weight: 600;
   padding-bottom: 32px;
   margin-bottom: 30px;
   transition: box-shadow 0.5s, border-radius 0.5s, opacity 0.5s;
@@ -318,8 +321,12 @@ body {
 
 /* About */
 
+.about {
+  padding-bottom: 136px;
+}
+
 .about__text p:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 /* Skills */
@@ -420,6 +427,7 @@ body {
 }
 
 .services__text {
+  font-size: 16px;
   line-height: 160%;
 }
 
@@ -433,7 +441,7 @@ body {
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 63px;
+  margin-bottom: 56px;
 }
 
 .filters__item:not(:last-child) {
@@ -443,6 +451,7 @@ body {
 .filters__btn {
   font-weight: 600;
   font-size: 24px;
+  line-height: 160%;
   transition: box-shadow 0.5s, border-radius 0.5s, color 0.5s;
 }
 
@@ -478,6 +487,7 @@ body {
 .portfolio__link {
   display: block;
   position: relative;
+  transition: box-shadow 0.7s;
 }
 
 .portfolio__link::before {
@@ -487,7 +497,7 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  transition: background-color 0.7s;
+  transition: background-color 0.7s, opacity 0.7s;
 }
 
 .portfolio__link:hover::before {
@@ -696,6 +706,7 @@ body {
 /* Contacts */
 
 .contacts {
+  font-size: 16px;
   padding-bottom: 140px;
 }
 
@@ -711,6 +722,10 @@ body {
 
 .contacts__text {
   margin-bottom: 30px;
+}
+
+.contacts__list {
+  margin-bottom: 18px;
 }
 
 .contacts__item:not(:last-child) {
@@ -1078,89 +1093,3 @@ body {
   }
 }
 
-@media (max-width: 330px) {
-  .container {
-    padding: 0 10px;
-  }
-}
-/* Чтобы фото в навыках вставало по центру. Другого способа не нашел */
-
-@media (min-aspect-ratio: 18/9) and (max-width: 992px) {
-  .title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .title::before {
-    height: 10px;
-  }
-
-  .section {
-    padding: 40px 0;
-    /* text-align: center; */
-  }
-
-  .header__nav {
-    padding-top: 11px;
-  }
-
-  .logo__img {
-    width: 111px;
-    height: 37px;
-  }
-
-  .menu {
-    padding: 50px 0 15px;
-  }
-
-  .menu__item {
-    margin-bottom: 9px;
-  }
-
-  .header__content {
-    height: calc(100vh - 59px);
-  }
-
-  .header__title {
-    font-size: 28px;
-  }
-
-  .header__subtitle {
-    font-size: 40px;
-  }
-
-  .header__link {
-    font-size: 14px;
-    line-height: 19px;
-    padding-bottom: 32px;
-    margin-bottom: 11px;
-  }
-
-  .header__link::before {
-    top: 28px;
-  }
-
-  /* ----------------- */
-/* 
-  .about__text, .services__list {
-    text-align: left;
-  } */
-
-  .services__item::before {
-    width: 40px;
-    height: 40px;
-  }
-
-  .services__item {
-    padding-top: 50px;
-  }
-
-  .services__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .services__title {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-}
