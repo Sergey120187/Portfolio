@@ -945,6 +945,7 @@ body {
 
   .reviews__comment {
     width: 100%;
+    padding: 0 30px;
     margin-bottom: 50px;
     margin-right: 0;
   }
@@ -1136,9 +1137,16 @@ body {
     height: 165px;
   }
 
-  .reviews__author,
+  .reviews__img {
+    margin-bottom: 30px;
+  }
+
+  .reviews__author {
+    font-size: 20px;
+  }
+
   .reviews__blockquote {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .reviews__video {
