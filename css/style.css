@@ -855,14 +855,16 @@ body {
 
   .header__btn {
     display: block;
-    background-image: url('../images/icon-menu.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    transition: background-image 1s;
   }
 
-  .header__btn--active {
-    background-image: url('../images/icon-menu_close.svg');
+  .btn-menu__line {
+    stroke: var(--white);
+    stroke-width: 2px;
+    transition: stroke 1s;
+  }
+
+  .btn-menu__line--hidden {
+    stroke: transparent;
   }
 
   .menu {
@@ -1119,6 +1121,10 @@ body {
     display: block;
   }
 
+  .contacts {
+    padding-bottom: 50px;
+  }
+
   .form {
     max-width: 100%;
   }
@@ -1273,7 +1279,6 @@ body {
 
   .contacts {
     text-align: center;
-    padding-bottom: 50px;
   }
 
   .contacts__inner {
