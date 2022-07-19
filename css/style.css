@@ -1,6 +1,7 @@
 /* Reset */
 html {
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
 }
 
 *,
@@ -207,6 +208,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 75px;
+  position: fixed;
+  max-width: 1170px;
+  width: calc(100% - 30px);
+  /* left: 0;
+  right: 0; */
 }
 
 .logo {
