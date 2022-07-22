@@ -18,7 +18,7 @@ $(function(){
     
     var mixer = mixitup('.portfolio__gallery');
 
-    $(".menu a, .logo, .header__link").on("click", function (event) {
+    $(".menu__link, .logo, .header__link").on("click", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
       top = $(id).offset().top;
