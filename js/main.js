@@ -10,10 +10,14 @@ $(function () {
     // alert('Media Query Matched!')
     $('.header__btn, .menu__link').on('click', function () {
       $('.menu').toggleClass('menu--active'),
-        $('.btn-menu__line').toggleClass('btn-menu__line--hidden'),
-        $('body').toggleClass('fixed');
+      $('.btn-menu__line').toggleClass('btn-menu__line--hidden'),
+      $('body').toggleClass('fixed');
     });
   }
+
+  $(window).scroll(function() {
+    $('.header__nav-inner').addClass('header__nav-inner--bg');
+  });
 
 
   $('.reviews__list').slick({
