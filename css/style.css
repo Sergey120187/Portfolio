@@ -191,7 +191,7 @@ body {
   background-position: center center;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header::before {
@@ -200,27 +200,24 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
-/* .header__nav-wrapper {
+.header__nav-wrapper {
   position: fixed;
   width: 100%;
   z-index: 3;
-  height: 100%;
-} */
+  transition: background-color 0.7s;
+}
 
 .header__nav {
   padding-top: 75px;
-}
-
-.header__nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
- .header__nav-inner--bg {
+.header__nav-wrapper--bg {
   background-color: var(--soft-blue);
 }
 
@@ -862,7 +859,7 @@ body {
   .btn-menu__line {
     stroke: var(--white);
     stroke-width: 2px;
-    transition: stroke 1s;
+    transition: stroke 0.5s;
   }
 
   .btn-menu__line--hidden {
@@ -876,7 +873,7 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    height: 100vh;
     display: block;
     overflow-y: auto;
     text-align: center;
