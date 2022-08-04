@@ -375,7 +375,7 @@ body {
 .skills__title {
   width: 64px;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -666,6 +666,9 @@ body {
 .statistics__item {
   display: flex;
   justify-content: space-between;
+}
+
+.statistics__list {
   gap: 20px;
 }
 
@@ -719,7 +722,7 @@ body {
 .statistics__number {
   font-weight: 600;
   font-size: 44px;
-  line-height: 100%;
+  line-height: 1;
 }
 
 /* Contacts */
@@ -735,6 +738,7 @@ body {
 }
 
 .contacts__info {
+  font-style: normal;
   max-width: 530px;
   margin-right: 15px;
   line-height: 1.6;
@@ -975,18 +979,13 @@ body {
     font-size: 20px;
   }
 
-  .statistics__list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .statistics__list {
-    max-width: 580px;
-    margin: 0 auto;
-  }
-
   .statistics__item {
-    margin-bottom: 15px;
+    padding: 120px 15px 25px;
+  }
+
+  .statistics__item::before {
+    height: 60px;
+    width: 70px;
   }
 
   .form__contact {
@@ -1099,13 +1098,34 @@ body {
   .portfolio__gallery {
     grid-template-columns: repeat(auto-fit, minmax(174px, 3fr));
     gap: 15px;
+    margin-bottom: 30px;
   }
 
   .reviews__video {
     max-width: 470px;
     height: 300px;
   }
-  
+
+  .statistics__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .statistics__item {
+    max-width: 200px;
+    padding-top: 100px;
+  }
+
+  .statistics__title {
+    margin-bottom: 10px;
+  }
+
+  .statistics__item::before {
+    top: 35px;
+  }
+
   .contacts__inner {
     display: block;
   }
@@ -1121,7 +1141,7 @@ body {
   .contacts__info {
     max-width: 100%;
     margin-right: 0;
-}
+  }
 
   .form {
     max-width: 100%;
@@ -1203,17 +1223,18 @@ body {
     display: block;
     margin-bottom: 31px;
   }
-  
+
   .filters__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
+
   .portfolio__gallery {
     grid-template-columns: repeat(auto-fit, minmax(165px, 3fr));
-}
+  }
+
   .reviews__img {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .reviews__item {
@@ -1261,16 +1282,18 @@ body {
 
   .statistics__list {
     max-width: 520px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   .statistics__item {
     max-width: 165px;
-    padding: 67px 15px 25px;
+    padding-top: 67px;
   }
 
   .statistics__title {
     font-size: 14px;
-    margin-bottom: 10px;
   }
 
   .statistics__number {
@@ -1281,10 +1304,6 @@ body {
     width: 38px;
     height: 45px;
     top: 25px;
-  }
-  
-  .statistics {
-    padding-bottom: 35px;
   }
 
   .contacts {
