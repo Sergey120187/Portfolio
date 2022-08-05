@@ -657,7 +657,6 @@ body {
   background-color: var(--main-text);
   height: 12px;
   width: 12px;
-  transform: translateY(-1px);
 }
 
 /* Statistics */
