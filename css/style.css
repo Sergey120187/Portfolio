@@ -306,6 +306,7 @@ body {
   transform: rotate(45deg);
   top: 12px;
   left: 12px;
+  width: 29px;
 }
 
 .header__btn.header__btn--open span:nth-child(2) {
@@ -319,6 +320,7 @@ body {
   transform: rotate(-45deg);
   top: 32px;
   left: 12px;
+  width: 29px;
 }
 
 .header__btn:active {
