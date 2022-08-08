@@ -7,11 +7,7 @@ $(function () {
   $('.header__btn, .menu__link').on('click', function () {
     $('.menu').toggleClass('menu--active'),
       $('.btn-menu__line').toggleClass('btn-menu__line--hidden'),
-      $('body').toggleClass('fixed');
-  });
-
-  $('.menu__link').on('click', function () {
-    $('body').removeClass('fixed');
+      $('#body').toggleClass('fixed');
   });
 
   $(window).scroll(function () {
@@ -23,6 +19,8 @@ $(function () {
       $('.header__nav-wrapper').removeClass('header__nav-wrapper--bg');
     } 
   });
+
+// Оставлю здесь, пригодится для будущих проектов!
 
   // $(document).on('scroll', function () {
   //   var position = $(window).scrollTop(),
