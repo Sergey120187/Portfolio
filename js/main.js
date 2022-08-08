@@ -12,7 +12,7 @@ $(function () {
 
   $(window).scroll(function () {
     var position = $(this).scrollTop();
-    if (position > 70) {
+    if (position > 50) {
       $('.header__top').addClass('header__top--bg'),
       $('.header__nav').addClass('header__nav--bg');
       
