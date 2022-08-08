@@ -488,7 +488,7 @@ body {
 .portfolio__gallery {
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 3fr));
+  grid-template-columns: repeat(3, minmax(165px, 1fr));
   justify-items: center;
   gap: 45px;
   margin-bottom: 60px;
@@ -955,7 +955,6 @@ body {
   }
 
   .portfolio__gallery {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 3fr));
     gap: 30px;
   }
 
@@ -1095,7 +1094,6 @@ body {
   }
 
   .portfolio__gallery {
-    grid-template-columns: repeat(auto-fit, minmax(174px, 3fr));
     gap: 15px;
     margin-bottom: 30px;
   }
@@ -1229,7 +1227,7 @@ body {
   }
 
   .portfolio__gallery {
-    grid-template-columns: repeat(auto-fit, minmax(165px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
   }
 
   .reviews__img {
