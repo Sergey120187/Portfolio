@@ -6,7 +6,7 @@ $(function () {
 
   $('.header__btn, .menu__link').on('click', function () {
     $('.menu').toggleClass('menu--active'),
-    $('.btn-menu__line').toggleClass('btn-menu__line--hidden'),
+    $('.header__btn').toggleClass('header__btn--open'),
     $('#body').toggleClass('fixed');
   });
 
