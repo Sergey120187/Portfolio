@@ -1,21 +1,20 @@
 $(function () {
 
-  // $('[data-facnybox=".portfolio__link"]').fancybox({
-  //   "width": "1000px",
-  // })
-
   $('.header__btn, .menu__link').on('click', function () {
     $('.menu').toggleClass('menu--active'),
     $('.header__btn').toggleClass('header__btn--open'),
     $('#body').toggleClass('fixed');
   });
 
+  $('.menu__link').on('click', function () {
+    $('body').removeClass('fixed');
+  });
+
   $(window).scroll(function () {
     var position = $(this).scrollTop();
     if (position > 50) {
       $('.header__top').addClass('header__top--bg'),
-      $('.header__nav').addClass('header__nav--bg');
-      
+      $('.header__nav').addClass('header__nav--bg');      
     }
     else {
       $('.header__top').removeClass('header__top--bg'),
